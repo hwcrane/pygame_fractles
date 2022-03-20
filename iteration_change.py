@@ -37,14 +37,6 @@ if __name__ == '__main__':
 
         pg.display.flip()
 
-        for event in pg.event.get():
-            if event.type == pg.QUIT:
-                pg.quit()
-        pg.image.save(window, f'frame' + f'{i}'.rjust(3, '0') + '.png')
+        # pg.image.save(window, f'frame' + f'{i}'.rjust(3, '0') + '.png')
 
-    running = True
-    while running:
-        for event in pg.event.get():
-            if event.type == pg.QUIT:
-                running = False
     pg.quit()
