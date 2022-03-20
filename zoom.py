@@ -10,8 +10,10 @@ WINDOW_HEIGHT = 1000
 COLOUR_MAP = cm.get_cmap('inferno')
 
 # Central Point to zoom into
-MIDPOINT = (-0.789374599271466936740382412558,
-            0.163089252677526719026415054868)
+# MIDPOINT = (-0.789374599271466936740382412558,
+#             0.163089252677526719026415054868)
+MIDPOINT = (-0.9223327810370947027656057193752719757635,
+            0.3102598350874576432708737495917724836010)
 
 
 def setup_window(width: int, height: int, name: str) -> pg.surface.Surface:
@@ -103,7 +105,7 @@ if __name__ == '__main__':
             WINDOW_WIDTH, WINDOW_HEIGHT, i, MIDPOINT)
         pixels = compute_pixels(c_arr, num_iterations)
         draw_pixels(pixels, window, num_iterations)
-        # pg.image.save(window, f'zoom/zoom' + f'{i}'.rjust(3, '0') + '.png')
+        pg.image.save(window, f'zoom2/zoom' + f'{i}'.rjust(3, '0') + '.png')
         print(i)
 
     print('done')
